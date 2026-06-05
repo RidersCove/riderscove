@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -7,303 +7,199 @@
 
 <style>
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,Helvetica,sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,Helvetica,sans-serif;
 }
 
 body{
-background:#000;
-color:#fff;
-padding:20px;
+    background:#000;
+    color:#fff;
+    height:100vh;
+    overflow:hidden;
 }
 
-.container{
-max-width:1400px;
-margin:auto;
+.wrapper{
+    height:100vh;
+    display:grid;
+    grid-template-rows:22% 26% 26% 22%;
+    gap:10px;
+    padding:10px;
 }
 
-.panel{
-background:#050505;
-border:1px solid #1a1a1a;
-padding:20px;
+.box{
+    background:#070707;
+    border:1px solid #1d1d1d;
+    border-radius:10px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    transition:.2s;
+}
+
+.box:hover{
+    border-color:#ffffff;
 }
 
 .hero{
-text-align:center;
-padding:60px 20px;
-margin-bottom:10px;
+    flex-direction:column;
 }
 
 .hero h1{
-font-size:clamp(4rem,10vw,9rem);
-font-weight:900;
-font-style:italic;
-line-height:0.9;
-text-transform:uppercase;
+    font-size:clamp(3rem,8vw,7rem);
+    font-weight:900;
+    letter-spacing:2px;
+    font-style:italic;
+    line-height:.9;
 }
 
 .hero p{
-margin-top:25px;
-letter-spacing:10px;
-color:#bbb;
-font-size:1.1rem;
+    margin-top:10px;
+    color:#999;
+    letter-spacing:8px;
+    font-size:.9rem;
 }
 
-.grid3{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:10px;
-margin-bottom:10px;
+.row{
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    gap:10px;
 }
 
-.grid3 img{
-width:100%;
-display:block;
+.logo{
+    font-size:2rem;
+    font-weight:900;
+    font-style:italic;
 }
 
-.logo-box{
-height:220px;
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:3rem;
-font-weight:900;
-font-style:italic;
+.rc{
+    font-size:4rem;
+    font-weight:900;
 }
 
-.apparel{
-display:grid;
-grid-template-columns:2fr 2fr 1.5fr;
-gap:10px;
-margin-bottom:10px;
+.circle{
+    width:120px;
+    height:120px;
+    border:4px solid #fff;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:2rem;
+    font-weight:900;
 }
 
 .mockup{
-height:320px;
-display:flex;
-align-items:center;
-justify-content:center;
-background:#0a0a0a;
-font-size:2rem;
-font-weight:bold;
-}
-
-.bottom{
-display:grid;
-grid-template-columns:1fr 2fr 1fr;
-gap:10px;
-margin-bottom:20px;
-}
-
-.palette{
-display:flex;
-gap:10px;
-margin-top:20px;
-}
-
-.color{
-width:60px;
-height:60px;
-border:1px solid #333;
+    font-size:1.8rem;
+    font-weight:700;
+    color:#ddd;
 }
 
 .brand{
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
+    flex-direction:column;
+    padding:20px;
 }
 
 .brand h2{
-letter-spacing:8px;
-margin-bottom:20px;
+    margin-bottom:10px;
+    letter-spacing:6px;
 }
 
 .brand p{
-color:#aaa;
+    color:#999;
+    font-size:.85rem;
 }
 
-.products{
-margin-top:40px;
+.palette{
+    display:flex;
+    gap:10px;
 }
 
-.products h2{
-margin-bottom:25px;
-font-size:2rem;
-}
-
-.product-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:15px;
-}
-
-.product{
-background:#111;
-border:1px solid #222;
-padding:20px;
-}
-
-.product h3{
-margin-bottom:10px;
-}
-
-.price{
-font-size:1.2rem;
-font-weight:bold;
-margin-bottom:10px;
-}
-
-button{
-background:transparent;
-border:1px solid white;
-color:white;
-padding:10px 20px;
-cursor:pointer;
-}
-
-button:hover{
-background:white;
-color:black;
-}
-
-footer{
-margin-top:40px;
-padding:30px;
-text-align:center;
-color:#666;
-border-top:1px solid #222;
+.color{
+    width:55px;
+    height:55px;
+    border-radius:8px;
+    border:1px solid #333;
 }
 
 @media(max-width:900px){
+    body{
+        overflow:auto;
+    }
 
-.grid3,
-.apparel,
-.bottom{
-grid-template-columns:1fr;
-}
+    .wrapper{
+        height:auto;
+        grid-template-rows:auto;
+    }
 
-.hero h1{
-font-size:4rem;
-}
-
+    .row{
+        grid-template-columns:1fr;
+    }
 }
 </style>
 </head>
-
 <body>
 
-<div class="container">
+<div class="wrapper">
 
-<div class="panel hero">
-<h1>RIDERS<br>COVE</h1>
-<p>THE RIDER'S BRAND</p>
-</div>
+    <div class="box hero">
+        <h1>RIDERS<br>COVE</h1>
+        <p>THE RIDER'S BRAND</p>
+    </div>
 
-<div class="grid3">
+    <div class="row">
+        <div class="box">
+            <div class="logo">RIDERS COVE</div>
+        </div>
 
-<div class="panel">
-<h3>ALTERNATE LOGO</h3>
-<div class="logo-box">RIDERS COVE</div>
-</div>
+        <div class="box">
+            <div class="rc">RC</div>
+        </div>
 
-<div class="panel">
-<h3>RC EMBLEM</h3>
-<div class="logo-box">RC</div>
-</div>
+        <div class="box">
+            <div class="circle">RC</div>
+        </div>
+    </div>
 
-<div class="panel">
-<h3>CIRCLE EMBLEM</h3>
-<div class="logo-box">◉ RC</div>
-</div>
+    <div class="row">
+        <div class="box">
+            <div class="mockup">HOODIE</div>
+        </div>
 
-</div>
+        <div class="box">
+            <div class="mockup">TEE</div>
+        </div>
 
-<div class="apparel">
+        <div class="box">
+            <div class="mockup">STICKERS</div>
+        </div>
+    </div>
 
-<div class="panel">
-<h3>APPAREL</h3>
-<div class="mockup">HOODIE</div>
-</div>
+    <div class="row">
 
-<div class="panel">
-<h3>APPAREL</h3>
-<div class="mockup">TEE</div>
-</div>
+        <div class="box">
+            <div class="palette">
+                <div class="color" style="background:#000;"></div>
+                <div class="color" style="background:#fff;"></div>
+                <div class="color" style="background:#0066ff;"></div>
+            </div>
+        </div>
 
-<div class="panel">
-<h3>STICKERS / DECALS</h3>
-<div class="mockup">RC STICKERS</div>
-</div>
+        <div class="box brand">
+            <h2>THE RIDER'S BRAND</h2>
+            <p>
+                APPAREL • MODS • ALUMINUM BOLTS •
+                ACCESSORIES • FUTURE BIKES
+            </p>
+        </div>
 
-</div>
+        <div class="box">
+            <div class="rc">RC</div>
+        </div>
 
-<div class="bottom">
-
-<div class="panel">
-<h3>COLOR PALETTE</h3>
-
-<div class="palette">
-<div class="color" style="background:#000"></div>
-<div class="color" style="background:#fff"></div>
-<div class="color" style="background:#0066ff"></div>
-</div>
-
-</div>
-
-<div class="panel brand">
-<h2>THE RIDER'S BRAND</h2>
-<p>
-APPAREL • MODS • ALUMINUM BOLTS • ACCESSORIES • FUTURE BIKES
-</p>
-</div>
-
-<div class="panel">
-<div class="logo-box">RC</div>
-</div>
-
-</div>
-
-<div class="products">
-
-<h2>FEATURED PRODUCTS</h2>
-
-<div class="product-grid">
-
-<div class="product">
-<h3>RC PREMIUM HOODIE</h3>
-<div class="price">$60</div>
-<button>COMING SOON</button>
-</div>
-
-<div class="product">
-<h3>RC ESSENTIAL TEE</h3>
-<div class="price">$35</div>
-<button>COMING SOON</button>
-</div>
-
-<div class="product">
-<h3>RC BOLT KIT</h3>
-<div class="price">$25</div>
-<button>COMING SOON</button>
-</div>
-
-<div class="product">
-<h3>RC STICKER PACK</h3>
-<div class="price">$5</div>
-<button>COMING SOON</button>
-</div>
-
-</div>
-
-</div>
-
-<footer>
-© 2026 RIDERS COVE • THE RIDER'S BRAND
-</footer>
+    </div>
 
 </div>
 
