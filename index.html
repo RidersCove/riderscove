@@ -6,200 +6,239 @@
 <title>Riders Cove | The Rider's Brand</title>
 
 <style>
+
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial,Helvetica,sans-serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,Helvetica,sans-serif;
 }
 
 body{
-    background:#000;
-    color:#fff;
-    height:100vh;
-    overflow:hidden;
+background:#000;
+color:#fff;
+height:100vh;
+overflow:hidden;
 }
 
-.wrapper{
-    height:100vh;
-    display:grid;
-    grid-template-rows:22% 26% 26% 22%;
-    gap:10px;
-    padding:10px;
+.container{
+height:100vh;
+padding:12px;
+display:grid;
+grid-template-rows:30% 35% 25%;
+gap:12px;
 }
 
-.box{
-    background:#070707;
-    border:1px solid #1d1d1d;
-    border-radius:10px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    transition:.2s;
+.panel{
+background:#050505;
+border:1px solid #1f1f1f;
+border-radius:8px;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+transition:.25s;
 }
 
-.box:hover{
-    border-color:#ffffff;
+.panel:hover{
+border-color:#fff;
+transform:translateY(-2px);
 }
 
 .hero{
-    flex-direction:column;
-}
-
-.hero h1{
-    font-size:clamp(3rem,8vw,7rem);
-    font-weight:900;
-    letter-spacing:2px;
-    font-style:italic;
-    line-height:.9;
-}
-
-.hero p{
-    margin-top:10px;
-    color:#999;
-    letter-spacing:8px;
-    font-size:.9rem;
-}
-
-.row{
-    display:grid;
-    grid-template-columns:1fr 1fr 1fr;
-    gap:10px;
+flex-direction:column;
 }
 
 .logo{
-    font-size:2rem;
-    font-weight:900;
-    font-style:italic;
+font-size:clamp(4rem,9vw,9rem);
+font-weight:900;
+font-style:italic;
+line-height:.8;
+letter-spacing:2px;
+text-transform:uppercase;
 }
 
-.rc{
-    font-size:4rem;
-    font-weight:900;
+.tagline{
+margin-top:18px;
+letter-spacing:10px;
+font-size:.9rem;
+color:#999;
 }
 
-.circle{
-    width:120px;
-    height:120px;
-    border:4px solid #fff;
-    border-radius:50%;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    font-size:2rem;
-    font-weight:900;
+.row{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:12px;
 }
 
-.mockup{
-    font-size:1.8rem;
-    font-weight:700;
-    color:#ddd;
+.category{
+cursor:pointer;
+flex-direction:column;
+}
+
+.category h2{
+font-size:1.6rem;
+font-style:italic;
+margin-bottom:10px;
+}
+
+.category p{
+color:#888;
+font-size:.85rem;
+padding:0 10px;
+}
+
+.bottom{
+display:grid;
+grid-template-columns:1fr 1fr 1fr;
+gap:12px;
+}
+
+.socials{
+flex-direction:column;
+}
+
+.socials h3{
+margin-bottom:15px;
+font-size:1.4rem;
+}
+
+.socials p{
+margin:4px 0;
+color:#bbb;
+}
+
+.future{
+flex-direction:column;
+padding:20px;
+}
+
+.future h2{
+margin-bottom:10px;
+font-style:italic;
+}
+
+.future p{
+color:#999;
+font-size:.9rem;
 }
 
 .brand{
-    flex-direction:column;
-    padding:20px;
+flex-direction:column;
 }
 
 .brand h2{
-    margin-bottom:10px;
-    letter-spacing:6px;
+font-size:2rem;
+letter-spacing:6px;
+margin-bottom:12px;
 }
 
 .brand p{
-    color:#999;
-    font-size:.85rem;
+color:#888;
+font-size:.85rem;
 }
 
-.palette{
-    display:flex;
-    gap:10px;
+@media(max-width:1000px){
+
+body{
+overflow:auto;
 }
 
-.color{
-    width:55px;
-    height:55px;
-    border-radius:8px;
-    border:1px solid #333;
+.container{
+height:auto;
 }
 
-@media(max-width:900px){
-    body{
-        overflow:auto;
-    }
-
-    .wrapper{
-        height:auto;
-        grid-template-rows:auto;
-    }
-
-    .row{
-        grid-template-columns:1fr;
-    }
+.row,
+.bottom{
+grid-template-columns:1fr;
 }
+
+}
+
 </style>
 </head>
+
 <body>
 
-<div class="wrapper">
+<div class="container">
 
-    <div class="box hero">
-        <h1>RIDERS<br>COVE</h1>
-        <p>THE RIDER'S BRAND</p>
-    </div>
+<div class="panel hero">
 
-    <div class="row">
-        <div class="box">
-            <div class="logo">RIDERS COVE</div>
-        </div>
+<div class="logo">
+RIDERS<br>
+COVE
+</div>
 
-        <div class="box">
-            <div class="rc">RC</div>
-        </div>
+<div class="tagline">
+THE RIDER'S BRAND
+</div>
 
-        <div class="box">
-            <div class="circle">RC</div>
-        </div>
-    </div>
+</div>
 
-    <div class="row">
-        <div class="box">
-            <div class="mockup">HOODIE</div>
-        </div>
+<div class="row">
 
-        <div class="box">
-            <div class="mockup">TEE</div>
-        </div>
+<div class="panel category">
+<h2>BIKE MODS</h2>
+<p>Performance upgrades, custom parts, and rider builds.</p>
+</div>
 
-        <div class="box">
-            <div class="mockup">STICKERS</div>
-        </div>
-    </div>
+<div class="panel category">
+<h2>SHIESTYS</h2>
+<p>Streetwear essentials for riders and everyday use.</p>
+</div>
 
-    <div class="row">
+<div class="panel category">
+<h2>JEANS</h2>
+<p>Rider-focused denim and premium apparel.</p>
+</div>
 
-        <div class="box">
-            <div class="palette">
-                <div class="color" style="background:#000;"></div>
-                <div class="color" style="background:#fff;"></div>
-                <div class="color" style="background:#0066ff;"></div>
-            </div>
-        </div>
+<div class="panel category">
+<h2>ALUMINUM BOLTS</h2>
+<p>Custom hardware kits and anodized bolt sets.</p>
+</div>
 
-        <div class="box brand">
-            <h2>THE RIDER'S BRAND</h2>
-            <p>
-                APPAREL • MODS • ALUMINUM BOLTS •
-                ACCESSORIES • FUTURE BIKES
-            </p>
-        </div>
+</div>
 
-        <div class="box">
-            <div class="rc">RC</div>
-        </div>
+<div class="bottom">
 
-    </div>
+<div class="panel socials">
+
+<h3>SOCIALS</h3>
+
+<p><strong>YouTube</strong></p>
+<p>RidersCove</p>
+
+<br>
+
+<p><strong>Email</strong></p>
+<p>RidersCoveOfficial@gmail.com</p>
+
+</div>
+
+<div class="panel brand">
+
+<h2>RIDERS COVE</h2>
+
+<p>
+APPAREL • MODS • SHIESTYS • JEANS •
+ALUMINUM BOLTS • ACCESSORIES • FUTURE BIKES
+</p>
+
+</div>
+
+<div class="panel future">
+
+<h2>FUTURE BIKES</h2>
+
+<p>
+The long-term vision:
+electric motorcycles built for riders,
+designed with performance, style, and innovation.
+</p>
+
+</div>
+
+</div>
 
 </div>
 
