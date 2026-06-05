@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Riders Cove | The Rider's Brand</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:Arial,Helvetica,sans-serif;
+background:#000;
+color:#fff;
+overflow-x:hidden;
+}
+
+header{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+background:linear-gradient(to bottom,#000,#111);
+}
+
+.logo{
+font-size:clamp(3rem,8vw,7rem);
+font-weight:900;
+letter-spacing:4px;
+text-transform:uppercase;
+}
+
+.tagline{
+margin-top:15px;
+font-size:1rem;
+letter-spacing:8px;
+color:#bbb;
+}
+
+.hero-btn{
+margin-top:40px;
+padding:15px 35px;
+border:2px solid #fff;
+color:#fff;
+text-decoration:none;
+font-weight:bold;
+transition:.3s;
+}
+
+.hero-btn:hover{
+background:#fff;
+color:#000;
+}
+
+section{
+padding:100px 10%;
+}
+
+.section-title{
+font-size:2.5rem;
+margin-bottom:30px;
+text-transform:uppercase;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.card{
+background:#111;
+border:1px solid #222;
+padding:40px 30px;
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+border-color:#fff;
+}
+
+.card h3{
+margin-bottom:10px;
+}
+
+.card p{
+color:#bbb;
+line-height:1.6;
+}
+
+.statement{
+text-align:center;
+font-size:2rem;
+font-weight:700;
+max-width:900px;
+margin:auto;
+line-height:1.4;
+}
+
+.future{
+background:#111;
+text-align:center;
+}
+
+footer{
+padding:60px 20px;
+text-align:center;
+border-top:1px solid #222;
+color:#777;
+}
+
+.rc{
+font-size:6rem;
+font-weight:900;
+margin-bottom:20px;
+}
+
+@media(max-width:768px){
+.statement{
+font-size:1.4rem;
+}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="logo">RIDERS COVE</div>
+<div class="tagline">THE RIDER'S BRAND</div>
+<a href="#shop" class="hero-btn">EXPLORE</a>
+</header>
+
+<section>
+<div class="statement">
+Built for riders. Designed for the culture.
+Apparel, mods, accessories, and the future of electric riding.
+</div>
+</section>
+
+<section id="shop">
+<h2 class="section-title">Collections</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>APPAREL</h3>
+<p>
+Premium hoodies, tees, hats, and streetwear inspired by moto culture.
+</p>
+</div>
+
+<div class="card">
+<h3>MODS</h3>
+<p>
+Parts and upgrades built for riders who want something different.
+</p>
+</div>
+
+<div class="card">
+<h3>ALUMINUM BOLTS</h3>
+<p>
+Custom anodized hardware kits and accessories.
+</p>
+</div>
+
+<div class="card">
+<h3>STICKERS</h3>
+<p>
+Decals and rider essentials for every build.
+</p>
+</div>
+
+</div>
+</section>
+
+<section>
+<div class="rc">RC</div>
+<div class="statement">
+Riders Cove is more than a brand.
+It's a place for riders, builders, and future innovators.
+</div>
+</section>
+
+<section class="future">
+<h2 class="section-title">Future Bikes</h2>
+<p style="max-width:700px;margin:auto;color:#bbb;line-height:1.8;">
+The long-term vision is electric motorcycles built with the same mindset:
+performance, style, and rider-first design.
+</p>
+</section>
+
+<footer>
+© 2026 RIDERS COVE • THE RIDER'S BRAND
+</footer>
+
+</body>
+</html>
