@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -10,51 +10,141 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial, Helvetica, sans-serif;
+font-family:Arial,Helvetica,sans-serif;
 }
 
 body{
 background:#000;
 color:#fff;
-}
-
-.hero{
-width:100%;
-min-height:100vh;
-display:flex;
-justify-content:center;
-align-items:center;
-background:#000;
 padding:20px;
 }
 
-.hero img{
-width:100%;
+.container{
 max-width:1400px;
+margin:auto;
+}
+
+.panel{
+background:#050505;
+border:1px solid #1a1a1a;
+padding:20px;
+}
+
+.hero{
+text-align:center;
+padding:60px 20px;
+margin-bottom:10px;
+}
+
+.hero h1{
+font-size:clamp(4rem,10vw,9rem);
+font-weight:900;
+font-style:italic;
+line-height:0.9;
+text-transform:uppercase;
+}
+
+.hero p{
+margin-top:25px;
+letter-spacing:10px;
+color:#bbb;
+font-size:1.1rem;
+}
+
+.grid3{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:10px;
+margin-bottom:10px;
+}
+
+.grid3 img{
+width:100%;
 display:block;
 }
 
-.shop{
-padding:80px 10%;
+.logo-box{
+height:220px;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:3rem;
+font-weight:900;
+font-style:italic;
+}
+
+.apparel{
+display:grid;
+grid-template-columns:2fr 2fr 1.5fr;
+gap:10px;
+margin-bottom:10px;
+}
+
+.mockup{
+height:320px;
+display:flex;
+align-items:center;
+justify-content:center;
+background:#0a0a0a;
+font-size:2rem;
+font-weight:bold;
+}
+
+.bottom{
+display:grid;
+grid-template-columns:1fr 2fr 1fr;
+gap:10px;
+margin-bottom:20px;
+}
+
+.palette{
+display:flex;
+gap:10px;
+margin-top:20px;
+}
+
+.color{
+width:60px;
+height:60px;
+border:1px solid #333;
+}
+
+.brand{
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
 text-align:center;
 }
 
-.shop h2{
-font-size:3rem;
-margin-bottom:50px;
-letter-spacing:4px;
+.brand h2{
+letter-spacing:8px;
+margin-bottom:20px;
+}
+
+.brand p{
+color:#aaa;
 }
 
 .products{
+margin-top:40px;
+}
+
+.products h2{
+margin-bottom:25px;
+font-size:2rem;
+}
+
+.product-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:15px;
 }
 
 .product{
 background:#111;
 border:1px solid #222;
-padding:30px;
+padding:20px;
 }
 
 .product h3{
@@ -64,74 +154,158 @@ margin-bottom:10px;
 .price{
 font-size:1.2rem;
 font-weight:bold;
-margin-bottom:15px;
+margin-bottom:10px;
 }
 
-.btn{
-display:inline-block;
-padding:12px 25px;
+button{
+background:transparent;
 border:1px solid white;
 color:white;
-text-decoration:none;
+padding:10px 20px;
+cursor:pointer;
 }
 
-.btn:hover{
+button:hover{
 background:white;
 color:black;
 }
 
 footer{
-padding:50px;
+margin-top:40px;
+padding:30px;
 text-align:center;
+color:#666;
 border-top:1px solid #222;
-color:#777;
+}
+
+@media(max-width:900px){
+
+.grid3,
+.apparel,
+.bottom{
+grid-template-columns:1fr;
+}
+
+.hero h1{
+font-size:4rem;
+}
+
 }
 </style>
 </head>
 
 <body>
 
-<section class="hero">
-<img src="brand-board.png" alt="Riders Cove">
-</section>
+<div class="container">
 
-<section class="shop">
+<div class="panel hero">
+<h1>RIDERS<br>COVE</h1>
+<p>THE RIDER'S BRAND</p>
+</div>
+
+<div class="grid3">
+
+<div class="panel">
+<h3>ALTERNATE LOGO</h3>
+<div class="logo-box">RIDERS COVE</div>
+</div>
+
+<div class="panel">
+<h3>RC EMBLEM</h3>
+<div class="logo-box">RC</div>
+</div>
+
+<div class="panel">
+<h3>CIRCLE EMBLEM</h3>
+<div class="logo-box">◉ RC</div>
+</div>
+
+</div>
+
+<div class="apparel">
+
+<div class="panel">
+<h3>APPAREL</h3>
+<div class="mockup">HOODIE</div>
+</div>
+
+<div class="panel">
+<h3>APPAREL</h3>
+<div class="mockup">TEE</div>
+</div>
+
+<div class="panel">
+<h3>STICKERS / DECALS</h3>
+<div class="mockup">RC STICKERS</div>
+</div>
+
+</div>
+
+<div class="bottom">
+
+<div class="panel">
+<h3>COLOR PALETTE</h3>
+
+<div class="palette">
+<div class="color" style="background:#000"></div>
+<div class="color" style="background:#fff"></div>
+<div class="color" style="background:#0066ff"></div>
+</div>
+
+</div>
+
+<div class="panel brand">
+<h2>THE RIDER'S BRAND</h2>
+<p>
+APPAREL • MODS • ALUMINUM BOLTS • ACCESSORIES • FUTURE BIKES
+</p>
+</div>
+
+<div class="panel">
+<div class="logo-box">RC</div>
+</div>
+
+</div>
+
+<div class="products">
 
 <h2>FEATURED PRODUCTS</h2>
 
-<div class="products">
+<div class="product-grid">
 
 <div class="product">
 <h3>RC PREMIUM HOODIE</h3>
 <div class="price">$60</div>
-<a href="#" class="btn">COMING SOON</a>
+<button>COMING SOON</button>
 </div>
 
 <div class="product">
 <h3>RC ESSENTIAL TEE</h3>
 <div class="price">$35</div>
-<a href="#" class="btn">COMING SOON</a>
-</div>
-
-<div class="product">
-<h3>RC STICKER PACK</h3>
-<div class="price">$5</div>
-<a href="#" class="btn">COMING SOON</a>
+<button>COMING SOON</button>
 </div>
 
 <div class="product">
 <h3>RC BOLT KIT</h3>
 <div class="price">$25</div>
-<a href="#" class="btn">COMING SOON</a>
+<button>COMING SOON</button>
+</div>
+
+<div class="product">
+<h3>RC STICKER PACK</h3>
+<div class="price">$5</div>
+<button>COMING SOON</button>
 </div>
 
 </div>
 
-</section>
+</div>
 
 <footer>
 © 2026 RIDERS COVE • THE RIDER'S BRAND
 </footer>
+
+</div>
 
 </body>
 </html>
