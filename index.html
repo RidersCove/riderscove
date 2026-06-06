@@ -6,7 +6,6 @@
 <title>Riders Cove | The Rider's Brand</title>
 
 <style>
-
 *{
 margin:0;
 padding:0;
@@ -24,18 +23,23 @@ overflow:hidden;
 .container{
 height:100vh;
 display:grid;
-grid-template-rows:32% 22% 22% 20%;
-gap:8px;
-padding:8px;
+grid-template-rows:30% 22% 22% 22%;
+gap:10px;
+padding:10px;
 }
 
 .panel{
-background:#000;
+background:#050505;
 border:1px solid #222;
 display:flex;
 justify-content:center;
 align-items:center;
 text-align:center;
+transition:.2s;
+}
+
+.panel:hover{
+border-color:#fff;
 }
 
 .hero{
@@ -51,20 +55,19 @@ line-height:.85;
 
 .hero p{
 margin-top:15px;
-letter-spacing:12px;
+letter-spacing:10px;
 color:#aaa;
-font-size:1rem;
 }
 
 .row{
 display:grid;
 grid-template-columns:1fr 1fr 1fr;
-gap:8px;
+gap:10px;
 }
 
 .box-title{
 font-size:2rem;
-font-weight:800;
+font-weight:900;
 font-style:italic;
 }
 
@@ -74,25 +77,13 @@ padding:20px;
 }
 
 .brand h2{
-font-size:2.2rem;
-letter-spacing:5px;
 margin-bottom:15px;
+letter-spacing:5px;
 }
 
 .brand p{
 color:#aaa;
 line-height:1.8;
-}
-
-.palette{
-display:flex;
-gap:12px;
-}
-
-.color{
-width:60px;
-height:60px;
-border:1px solid #333;
 }
 
 .socials{
@@ -106,11 +97,6 @@ margin-bottom:15px;
 .socials p{
 margin:4px 0;
 color:#aaa;
-}
-
-.panel:hover{
-border-color:#fff;
-transition:.2s;
 }
 
 @media(max-width:1000px){
@@ -128,7 +114,6 @@ grid-template-columns:1fr;
 }
 
 }
-
 </style>
 </head>
 
@@ -176,13 +161,13 @@ grid-template-columns:1fr;
 <div class="row">
 
 <div class="panel">
-
-<div class="palette">
-<div class="color" style="background:#000000;"></div>
-<div class="color" style="background:#ffffff;"></div>
-<div class="color" style="background:#0066ff;"></div>
+<div>
+<div class="box-title">ALUMINUM BOLTS</div>
+<br>
+<p style="color:#aaa;">
+Custom anodized hardware kits
+</p>
 </div>
-
 </div>
 
 <div class="panel brand">
