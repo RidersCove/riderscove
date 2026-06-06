@@ -23,75 +23,76 @@ overflow:hidden;
 
 .container{
 height:100vh;
-padding:12px;
 display:grid;
-grid-template-rows:30% 35% 25%;
-gap:12px;
+grid-template-rows:32% 22% 22% 20%;
+gap:8px;
+padding:8px;
 }
 
 .panel{
-background:#050505;
-border:1px solid #1f1f1f;
-border-radius:8px;
+background:#000;
+border:1px solid #222;
 display:flex;
 justify-content:center;
 align-items:center;
 text-align:center;
-transition:.25s;
-}
-
-.panel:hover{
-border-color:#fff;
-transform:translateY(-2px);
 }
 
 .hero{
 flex-direction:column;
 }
 
-.logo{
-font-size:clamp(4rem,9vw,9rem);
+.hero h1{
+font-size:clamp(4rem,9vw,10rem);
 font-weight:900;
 font-style:italic;
-line-height:.8;
-letter-spacing:2px;
-text-transform:uppercase;
+line-height:.85;
 }
 
-.tagline{
-margin-top:18px;
-letter-spacing:10px;
-font-size:.9rem;
-color:#999;
+.hero p{
+margin-top:15px;
+letter-spacing:12px;
+color:#aaa;
+font-size:1rem;
 }
 
 .row{
 display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:12px;
-}
-
-.category{
-cursor:pointer;
-flex-direction:column;
-}
-
-.category h2{
-font-size:1.6rem;
-font-style:italic;
-margin-bottom:10px;
-}
-
-.category p{
-color:#888;
-font-size:.85rem;
-padding:0 10px;
-}
-
-.bottom{
-display:grid;
 grid-template-columns:1fr 1fr 1fr;
+gap:8px;
+}
+
+.box-title{
+font-size:2rem;
+font-weight:800;
+font-style:italic;
+}
+
+.brand{
+flex-direction:column;
+padding:20px;
+}
+
+.brand h2{
+font-size:2.2rem;
+letter-spacing:5px;
+margin-bottom:15px;
+}
+
+.brand p{
+color:#aaa;
+line-height:1.8;
+}
+
+.palette{
+display:flex;
 gap:12px;
+}
+
+.color{
+width:60px;
+height:60px;
+border:1px solid #333;
 }
 
 .socials{
@@ -100,42 +101,16 @@ flex-direction:column;
 
 .socials h3{
 margin-bottom:15px;
-font-size:1.4rem;
 }
 
 .socials p{
 margin:4px 0;
-color:#bbb;
+color:#aaa;
 }
 
-.future{
-flex-direction:column;
-padding:20px;
-}
-
-.future h2{
-margin-bottom:10px;
-font-style:italic;
-}
-
-.future p{
-color:#999;
-font-size:.9rem;
-}
-
-.brand{
-flex-direction:column;
-}
-
-.brand h2{
-font-size:2rem;
-letter-spacing:6px;
-margin-bottom:12px;
-}
-
-.brand p{
-color:#888;
-font-size:.85rem;
+.panel:hover{
+border-color:#fff;
+transition:.2s;
 }
 
 @media(max-width:1000px){
@@ -148,8 +123,7 @@ overflow:auto;
 height:auto;
 }
 
-.row,
-.bottom{
+.row{
 grid-template-columns:1fr;
 }
 
@@ -163,78 +137,77 @@ grid-template-columns:1fr;
 <div class="container">
 
 <div class="panel hero">
-
-<div class="logo">
-RIDERS<br>
-COVE
+<h1>RIDERS<br>COVE</h1>
+<p>THE RIDER'S BRAND</p>
 </div>
 
-<div class="tagline">
-THE RIDER'S BRAND
+<div class="row">
+
+<div class="panel">
+<div class="box-title">BIKE MODS</div>
+</div>
+
+<div class="panel">
+<div class="box-title">SHIESTYS</div>
+</div>
+
+<div class="panel">
+<div class="box-title">JEANS</div>
 </div>
 
 </div>
 
 <div class="row">
 
-<div class="panel category">
-<h2>BIKE MODS</h2>
-<p>Performance upgrades, custom parts, and rider builds.</p>
+<div class="panel">
+<div class="box-title">HOODIES</div>
 </div>
 
-<div class="panel category">
-<h2>SHIESTYS</h2>
-<p>Streetwear essentials for riders and everyday use.</p>
+<div class="panel">
+<div class="box-title">STICKERS</div>
 </div>
 
-<div class="panel category">
-<h2>JEANS</h2>
-<p>Rider-focused denim and premium apparel.</p>
-</div>
-
-<div class="panel category">
-<h2>ALUMINUM BOLTS</h2>
-<p>Custom hardware kits and anodized bolt sets.</p>
+<div class="panel">
+<div class="box-title">TEES</div>
 </div>
 
 </div>
 
-<div class="bottom">
+<div class="row">
 
-<div class="panel socials">
+<div class="panel">
 
-<h3>SOCIALS</h3>
-
-<p><strong>YouTube</strong></p>
-<p>RidersCove</p>
-
-<br>
-
-<p><strong>Email</strong></p>
-<p>RidersCoveOfficial@gmail.com</p>
+<div class="palette">
+<div class="color" style="background:#000000;"></div>
+<div class="color" style="background:#ffffff;"></div>
+<div class="color" style="background:#0066ff;"></div>
+</div>
 
 </div>
 
 <div class="panel brand">
 
-<h2>RIDERS COVE</h2>
+<h2>THE RIDER'S BRAND</h2>
 
 <p>
-APPAREL • MODS • SHIESTYS • JEANS •
-ALUMINUM BOLTS • ACCESSORIES • FUTURE BIKES
+BIKE MODS • SHIESTYS • JEANS<br>
+HOODIES • STICKERS • TEES<br>
+ALUMINUM BOLTS
 </p>
 
 </div>
 
-<div class="panel future">
+<div class="panel socials">
 
-<h2>FUTURE BIKES</h2>
+<h3>SOCIALS</h3>
 
-<p>
-The long-term vision:
-electric motorcycles built for riders,
-designed with performance, style, and innovation.
-</p>
+<p>YouTube</p>
+<p><strong>RidersCove</strong></p>
+
+<br>
+
+<p>Email</p>
+<p><strong>RidersCoveOfficial@gmail.com</strong></p>
 
 </div>
 
